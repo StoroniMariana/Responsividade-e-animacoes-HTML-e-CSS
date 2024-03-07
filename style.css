@@ -178,6 +178,11 @@ h4 {
     border: none;
     background-color: transparent;
     cursor: pointer;
+
+}
+
+.add-cart:hover {
+    transform: scale(1.2);
 }
 
 .add-cart img {
