@@ -6,7 +6,6 @@
 }
 
 body {
-    background: rgb(0,212,255);
     background: linear-gradient(48deg, rgba(0,212,255,1) 0%, rgba(251,82,131,1) 100%);
     display: flex;
     justify-content: center;
@@ -29,6 +28,7 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .logo {
@@ -148,8 +148,9 @@ h4 {
 }
 
 .add-cart img {
-    height: 45px;
-    width: 45px;
+    height: 100%;
+    width: 100%;
+    max-width: 55px;
 }
 
 .social-links {
@@ -162,4 +163,88 @@ h4 {
     height: 20px;
     margin: 20px;
     cursor: pointer;
+}
+
+.menu-icon {
+    width: 25px;
+    margin-right: 15px;
+    display: none;
+}
+
+@media (max-width: 760px){
+
+    
+    .container {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        overflow: auto;
+    }
+
+    .coloumn-1 h2 {
+        font-size: 40px;
+        
+    }
+
+    .coloumn-1 h3 {
+        font-size: 26px;
+        
+    }
+
+
+    #menu-list {
+        position: relative;
+        top: 60px;
+        left: 60px;
+        overflow: hidden;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-li {
+        display: block;
+        margin-top: 5px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+
+    .coloumn-2 {
+        margin: 0 10px 30px 10px;
+    }
+
+    .controller {
+        width: 85%;
+        z-index: 2;
+        
+    }
+
+    .color-box {
+        transform: translateX(70px);
+    }
+}
+
+@media (max-width: 450px) {
+    .coloumn-1 h2 {
+        font-size: 40px;
+        margin-right: 10px;
+    }
+
+    .coloumn-1 h3 {
+        font-size: 26px;
+        margin-right: 10px;
+    }
+
+    .coloumn-1 h4, p {
+        margin-left: 20px;
+    }
+
+    .buy {
+        margin-left: 15px;
+    }
 }
