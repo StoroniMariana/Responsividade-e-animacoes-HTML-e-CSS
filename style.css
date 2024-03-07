@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 140vh;
 }
 
 .container {
@@ -29,11 +29,21 @@ body {
     display: flex;
     align-items: center;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 8px;
+}
+
+#menu-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+
 }
 
 .logo {
     width: 50px;
-    margin: 30px 0;
+    margin: 20px 0 20px 15px;
+    
 }
 
 nav {
@@ -106,7 +116,7 @@ h4 {
 }
 
 .buy {
-    width: 50%;
+    width: 148px;
     border: none;
     padding: 12px 10px;
     outline: none;
@@ -114,6 +124,27 @@ h4 {
     border-radius: 6px;
     cursor: pointer;
     background: linear-gradient(to right, #fb5283, #ff3527);
+    transition: all 0.5s ease-in-out;
+
+}
+
+.buy img {
+    width: 30px;
+    display: none;
+}
+
+.buy:hover {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 160px;
+    
+}
+
+.buy:hover img {
+    display: block;
+    
 }
 
 .coloumn-2 {
@@ -125,6 +156,8 @@ h4 {
 .controller {
     width: 90%;
     z-index: 2;
+
+    animation: moveController 2s infinite alternate ease-in-out;
 }
 
 .color-box {
@@ -197,10 +230,12 @@ h4 {
         top: 60px;
         left: 60px;
         overflow: hidden;
+        transition: all 0.8s ease-in-out;
     }
 
     .menu-icon {
         display: block;
+        cursor: pointer;
     }
 
     .nav-li {
@@ -246,5 +281,11 @@ h4 {
 
     .buy {
         margin-left: 15px;
+    }
+}
+
+@keyframes moveController {
+    from {
+        transform: translate(-5%, -5%) rotate(-5deg);
     }
 }
