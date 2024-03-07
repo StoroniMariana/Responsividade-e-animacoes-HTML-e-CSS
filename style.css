@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 140vh;
+    height: 100%;
 }
 
 .container {
@@ -226,11 +226,13 @@ h4 {
 
 
     #menu-list {
+        display: block;
+        flex-direction: column;
         position: relative;
         top: 60px;
         left: 60px;
         overflow: hidden;
-        transition: all 0.8s ease-in-out;
+        transition: all 0.5s ease-in-out;
     }
 
     .menu-icon {
